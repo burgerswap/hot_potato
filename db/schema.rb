@@ -39,12 +39,6 @@ ActiveRecord::Schema.define(version: 20160618125144) do
     t.float    "lng"
   end
 
-  create_table "searches", force: :cascade do |t|
-    t.string   "geo_location"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
 # Could not dump table "users" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
 

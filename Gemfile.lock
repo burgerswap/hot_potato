@@ -201,11 +201,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise (~> 4.1)
-<<<<<<< 72250dd2756c209fd2e12f912b8a5633abd7bc93
   geokit-rails
-=======
-  flat-ui-rails
->>>>>>> add flat ui
   jbuilder (~> 2.0)
   jquery-rails
   omniauth-facebook
