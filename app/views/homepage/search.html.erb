@@ -1,0 +1,10 @@
+<script type="text/javascript">
+	$(function(){
+		$("#search-geo-location").click(function(){
+			window.location.href = "http://localhost:3000/consumptions?geolocation="+$("#geo-location").val();
+		})
+	})
+</script>
+<input type="text" id="geo-location" value=""></input>
+
+<a href="#" id="search-geo-location">Search</a>

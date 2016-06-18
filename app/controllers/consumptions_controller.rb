@@ -8,6 +8,7 @@ class ConsumptionsController < ApplicationController
     #@consumptions = Consumption.all
      @leftovers = Leftover.all
      @consumption = Consumption.new
+     @geolocation = params[:geolocation]
   end
 
   # GET /consumptions/1
@@ -33,7 +34,10 @@ class ConsumptionsController < ApplicationController
     @c_leftover.current_quantity = @c_leftover.current_quantity - @consumption.quantity
     if @c_leftover.current_quantity == 0
       @c_leftover.status = "Claimed"
+    else 
+      @c_leftover.status = "Available"
     end
+
     @c_leftover.save
     respond_to do |format|
       if @consumption.save
