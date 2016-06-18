@@ -1,5 +1,41 @@
 <h1>New Leftover</h1>
-
+<div class="body-content">
+<div class="row">
+<div class="panel height40">
 <%= render 'form' %>
+</div>
+</div>
+</div>
 
 <%= link_to 'Back', leftovers_path %>
+<script type="text/javascript">
+      var placeSearch, autocomplete;
+      function initAutocomplete() {
+        autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById('autocomplete')),
+            {types: ['geocode']});
+
+        autocomplete.addListener('place_changed', fillInAddress);
+      }
+
+      function fillInAddress() {
+        var place = autocomplete.getPlace();
+        $("#location").val(place.geometry.location.lat()+","+place.geometry.location.lng())
+      }
+      function geolocate() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var geolocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            var circle = new google.maps.Circle({
+              center: geolocation,
+              radius: position.coords.accuracy
+            });
+            autocomplete.setBounds(circle.getBounds());
+          });
+        }
+      }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWYH9z0PIhnBdttHJF6adA8GjuhY0LDao&libraries=places&callback=initAutocomplete"></script>

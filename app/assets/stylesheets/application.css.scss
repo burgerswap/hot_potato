@@ -18,10 +18,38 @@
 @import "bootstrap";
 
 html { 
-  background: url(http://sodiegotours.com/new/wp-content/uploads/2014/03/bigstock-Young-people-eating-in-a-Thai-36375130.jpg) no-repeat center center fixed; 
+  background: url(bg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  
+}
+body{
+	background: none;
+	h1 {
+		text-align: justify;
+	}
+}
+.profile-info{
+	width: 203px;
+	padding-top: 25%;
+}
+.profile-image{
+	border-radius: 30px;
+    width: 50px;
+    display: inline-block;
+    float: left;
+    overflow: hidden
+}
+.profile-name{
+	font-weight: bold;
+	color: #000;
+	float: left;
+	padding: 15px 0 0 5px;
+}
+.body-content{
+	margin-top: 14%;
+}
+.height40{
+	min-height: 40%;
 }

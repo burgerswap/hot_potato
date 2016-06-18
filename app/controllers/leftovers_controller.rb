@@ -26,6 +26,8 @@ class LeftoversController < ApplicationController
   def create
     @leftover = current_user.leftovers.build(leftover_params)
     @leftover.current_quantity =  @leftover.quantity
+    @leftover.lat = @leftover.location.to_s.split(',')[0]
+    @leftover.lng = @leftover.location.to_s.split(',')[1]
     respond_to do |format|
       if @leftover.save
         format.html { redirect_to @leftover, notice: 'Leftover was successfully created.' }

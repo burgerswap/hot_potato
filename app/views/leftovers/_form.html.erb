@@ -13,39 +13,39 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title , :class => 'form-control'%>
   </div>
   <div class="field">
     <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, :id => 'autocomplete' , :onfocus => 'geolocate()', :autocomplete => 'off', :class => 'form-control' %>
   </div>
   <div class="field">
     <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%= f.text_field :location , :id => 'location', :class => 'form-control'%>
   </div>
   <div class="field">
     <%= f.label :pincode %><br>
-    <%= f.number_field :pincode %>
+    <%= f.number_field :pincode , :id => 'pincode', :class => 'form-control'%>
   </div>
   <div class="field">
     <%= f.label :quantity %><br>
-    <%= f.number_field :quantity %>
+    <%= f.number_field :quantity , :class => 'form-control'%>
   </div>
   <div class="field">
     <%= f.label :food_type %><br>
-    <%= f.text_field :food_type %>
+    <%= f.text_field :food_type , :class => 'form-control'%>
   </div>
   <div class="field">
     <%= f.label :available_from %><br>
-    <%= f.text_field :available_from %>
+    <%= f.text_field :available_from , :class => 'form-control'%>
   </div>
   <div class="field">
     <%= f.label :available_to %><br>
-    <%= f.text_field :available_to %>
+    <%= f.text_field :available_to , :class => 'form-control'%>
   </div>
   <div class="field">
     <%= f.label :status %><br>
-    <%= f.text_field :status %>
+    <%= f.text_field :status , :class => 'form-control'%>
   </div>
   <div class="actions">
     <%= f.submit %>

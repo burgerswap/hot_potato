@@ -1,18 +1,16 @@
-
-
-<div class="panel panel-default">
-  <div class="panel-body">
-    <h3>Hello and Welcome to Hot Potatoe..!</h3>
-    <p>Save food and spread love:
-Spread the love - share the app with your friends
-Score free food from you neighbourhood 
-Have some “good” food leftover? share them
-Why sleep hungry tonight? look for freebies in your own suburb
-Don’t waste food. There is someone else sleeping hungry tonight
+<div class="body-content">
+<div class="row">
+<h1>Hello and Welcome to Hot Potatoe..!</h1>
+<p>Save food and spread love: Spread the love - share the app with your friends<br>
+Score free food from you neighbourhood <br>
+Have some “good” food leftover? share them<br>
+Why sleep hungry tonight? look for freebies in your own suburb<br>
+Don’t waste food. There is someone else sleeping hungry tonight<br>
 Share you dinner/ lunch or breakie!</p>
-
-    <%= link_to 'I have food', new_leftover_path, :class=>"btn btn-primary" %> 
-    <%= link_to 'New Consumption', homepage_search_path, :class=>"btn btn-primary"  %>
-  </div>
 </div>
-
+<div class="row">
+	<%= link_to 'I have food', new_leftover_path, :class=>"btn btn-primary btn-lg" %> 
+    <%= link_to 'I want food', homepage_search_path, :class=>"btn btn-success btn-lg"  %>
+</div>
+</div>
+    
