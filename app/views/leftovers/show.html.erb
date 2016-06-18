@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @leftover.title %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @leftover.address %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @leftover.location %>
+</p>
+
+<p>
+  <strong>Pincode:</strong>
+  <%= @leftover.pincode %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @leftover.quantity %>
+</p>
+
+<p>
+  <strong>Food type:</strong>
+  <%= @leftover.food_type %>
+</p>
+
+<p>
+  <strong>Available from:</strong>
+  <%= @leftover.available_from %>
+</p>
+
+<p>
+  <strong>Available to:</strong>
+  <%= @leftover.available_to %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @leftover.status %>
+</p>
+
+<%= link_to 'Edit', edit_leftover_path(@leftover) %> |
+<%= link_to 'Back', leftovers_path %>

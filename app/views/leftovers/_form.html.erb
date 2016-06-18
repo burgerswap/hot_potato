@@ -1,0 +1,53 @@
+<%= form_for(@leftover) do |f| %>
+  <% if @leftover.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@leftover.errors.count, "error") %> prohibited this leftover from being saved:</h2>
+
+      <ul>
+      <% @leftover.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :pincode %><br>
+    <%= f.number_field :pincode %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :food_type %><br>
+    <%= f.text_field :food_type %>
+  </div>
+  <div class="field">
+    <%= f.label :available_from %><br>
+    <%= f.text_field :available_from %>
+  </div>
+  <div class="field">
+    <%= f.label :available_to %><br>
+    <%= f.text_field :available_to %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
