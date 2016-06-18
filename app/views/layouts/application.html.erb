@@ -8,9 +8,8 @@
 </head>
 <body>
 <div class="container">
-<% flash.each do |name, msg| %>
- <%= content_tag(:dev, msg, class: "alert alert-info") %>
-<% end %>
+<img src=<%= current_user.profilepic %>>
+<%= current_user.name %>
 <%= yield %>
 </div>
 </body>

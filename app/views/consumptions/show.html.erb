@@ -1,5 +1,4 @@
-<p id="notice"><%= notice %></p>
-
+<div class="alert alert-success" role="alert">Yay..! Your food is ready at <%=@consumption.leftover.address %></div>
 <p>
   <strong>Leftover:</strong>
   <%= @consumption.leftover_id %>
@@ -16,4 +15,4 @@
 </p>
 
 <%= link_to 'Edit', edit_consumption_path(@consumption) %> |
-<%= link_to 'Back', consumptions_path %>
+<%= link_to 'Back', root_path %>
