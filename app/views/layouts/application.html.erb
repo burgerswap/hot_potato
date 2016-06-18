@@ -11,6 +11,6 @@
  <%= content_tag(:dev, msg, class: "alert alert-info") %>
 <% end %>
 <%= yield %>
-
+<%= link_to 'Sign out', destroy_user_session_path %>
 </body>
 </html>
