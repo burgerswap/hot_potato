@@ -29,7 +29,12 @@ class ConsumptionsController < ApplicationController
   def create
     @consumption = Consumption.new(consumption_params)
     @consumption.user_id = current_user.id
-
+    @c_leftover = @consumption.leftover
+    @c_leftover.current_quantity = @c_leftover.current_quantity - @consumption.quantity
+    if @c_leftover.current_quantity == 0
+      @c_leftover.status = "Claimed"
+    end
+    @c_leftover.save
     respond_to do |format|
       if @consumption.save
         format.html { redirect_to @consumption, notice: 'Consumption was successfully created.' }

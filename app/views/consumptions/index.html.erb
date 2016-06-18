@@ -5,14 +5,12 @@
     <tr>
       <th>Title</th>
       <th>Address</th>
-      <th>Location</th>
-      <th>Pincode</th>
-      <th>Quantity</th>
       <th>Food type</th>
+      <th>Quantity</th>
       <th>Available from</th>
       <th>Available to</th>
       <th>Status</th>
-      <th>Consume</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -20,11 +18,9 @@
     <% @leftovers.each do |leftover| %>
       <tr>
         <td><%= leftover.title %></td>
-        <td><%= leftover.address %></td>
-        <td><%= leftover.location %></td>
-        <td><%= leftover.pincode %></td>
-        <td><%= leftover.quantity %></td>
+        <td><%= leftover.address %>, <%= leftover.pincode %></td>
         <td><%= leftover.food_type %></td>
+        <td><%= leftover.current_quantity %></td>
         <td><%= leftover.available_from %></td>
         <td><%= leftover.available_to %></td>
         <td><%= leftover.status %></td>
