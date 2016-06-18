@@ -1,5 +1,6 @@
 class LeftoversController < ApplicationController
   before_action :set_leftover, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /leftovers
   # GET /leftovers.json
@@ -14,7 +15,7 @@ class LeftoversController < ApplicationController
 
   # GET /leftovers/new
   def new
-    @leftover = Leftover.new
+    @leftover = current_user.leftovers.build
   end
 
   # GET /leftovers/1/edit
@@ -24,8 +25,8 @@ class LeftoversController < ApplicationController
   # POST /leftovers
   # POST /leftovers.json
   def create
-    @leftover = Leftover.new(leftover_params)
-
+    @leftover = current_user.leftovers.build(leftover_params)
+    @leftover.current_quantity =  @leftover.quantity
     respond_to do |format|
       if @leftover.save
         format.html { redirect_to @leftover, notice: 'Leftover was successfully created.' }
@@ -69,6 +70,6 @@ class LeftoversController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def leftover_params
-      params.require(:leftover).permit(:title, :address, :location, :pincode, :quantity, :food_type, :available_from, :available_to, :status)
+      params.require(:leftover).permit(:title, :address, :location, :pincode, :quantity, :food_type, :available_from, :available_to, :status, :user_id)
     end
 end
