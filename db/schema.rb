@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160618073321) do
+ActiveRecord::Schema.define(version: 20160618075910) do
 
   create_table "consumptions", force: :cascade do |t|
     t.integer  "leftover_id"
@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(version: 20160618073321) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
