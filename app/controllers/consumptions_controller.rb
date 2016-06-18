@@ -6,9 +6,9 @@ class ConsumptionsController < ApplicationController
   # GET /consumptions.json
   def index
     #@consumptions = Consumption.all
-     @leftovers = Leftover.all
+     @geolocation = params[:geolocation].to_s.split(',')
+     @leftovers = Leftover.within(5, :origin => @geolocation).order('distance asc').all
      @consumption = Consumption.new
-     @geolocation = params[:geolocation]
   end
 
   # GET /consumptions/1

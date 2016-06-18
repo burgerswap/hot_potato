@@ -14,6 +14,7 @@ gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 gem 'omniauth-facebook'
+gem 'geokit-rails'
 
 group :development, :test do
   gem 'byebug'
