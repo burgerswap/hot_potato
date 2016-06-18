@@ -34,7 +34,7 @@ class ConsumptionsController < ApplicationController
     @c_leftover.current_quantity = @c_leftover.current_quantity - @consumption.quantity
     if @c_leftover.current_quantity == 0
       @c_leftover.status = "Claimed"
-    else 
+    else
       @c_leftover.status = "Available"
     end
 

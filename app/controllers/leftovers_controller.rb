@@ -1,3 +1,4 @@
+
 class LeftoversController < ApplicationController
   before_action :set_leftover, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
@@ -74,3 +75,4 @@ class LeftoversController < ApplicationController
       params.require(:leftover).permit(:title, :address, :location, :pincode, :quantity, :food_type, :available_from, :available_to, :status, :user_id)
     end
 end
+
