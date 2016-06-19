@@ -3,7 +3,8 @@
 <% if @leftovers.any? %>
 <div class="content active">
 <h1>We've found food near you !</h1>
-<table class="display-result" id="foodAvailable">
+
+<table class="table table-striped" id="foodAvailable">
   <thead>
     <tr>
       <th>Title</th>
@@ -45,11 +46,4 @@
 <% end %>
 </div>
 </div>
-<script type="text/javascript">
-  $(function(){
-    $("#foodAvailable tbody .food_quantity").each(function(i, tr){
-
-    })
-  })
-</script>
 
