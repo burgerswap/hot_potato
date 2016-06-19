@@ -24,6 +24,9 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+html:after {
+  background: rgba(0,0,0,0.1);
+}
 body{
 	background: none;
 	h1 {
@@ -48,8 +51,166 @@ body{
 	padding: 15px 0 0 5px;
 }
 .body-content{
-	margin-top: 14%;
+	margin-top: 6%;
 }
 .height40{
 	min-height: 40%;
+}
+.center {
+  text-align: center; }
+
+.left {
+  text-align: left; }
+
+ul {
+  text-align: left; }
+
+.brand {
+  text-align: center;
+  margin: 0;
+  padding: 0; }
+
+.brand h1 {
+  margin: 0 0 40px 0; }
+
+.nearby-food {
+  margin-top: 2em;
+  background-color: #fff;
+  text-align: left; }
+
+.nearby-food h6 {
+  margin: 0; }
+
+.button-holder {
+  text-align: right; }
+
+.tile-image {
+  background-image: url("/media/bananas.png");
+  background-size: cover;
+  width: 160px;
+  height: 120px;
+  position: relative;
+  display: inline-block;
+  margin: 1em 1em; }
+
+.tile-image div-yes {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 2em;
+  color: #16A085; }
+
+.tile-image div-no {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 2em;
+  color: #C0392B; }
+
+h1, .h1 {
+    font-size: 61px;
+}
+
+h1, h2, h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.1;
+    color: inherit;
+}
+h4, .h4 {
+    font-size: 29px;
+}
+
+h4, h5, h6 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.1;
+    color: inherit;
+}
+
+ul {
+    text-align: left;
+}
+
+ul, ol {
+    margin-bottom: 15px;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+.tile {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgb(239, 240, 242);
+    padding: 14px;
+    border-radius: 6px;
+}
+.btn-block {
+    white-space: normal;
+}
+.btn-primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(26, 188, 156);
+}
+.btn {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    -webkit-font-smoothing: subpixel-antialiased;
+    padding: 10px 15px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-radius: 4px;
+    transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
+}
+.content-text{
+	    background: rgba(220,215,215,.4);
+    border-radius: 6px;
+}
+.content{
+	background: rgba(220,215,215,.4);
+    border-radius: 6px;
+    border: 0px;
+    padding:25px;
+}
+.MarginTop10Px {
+	margin-top:10px;
 }

@@ -11,43 +11,62 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title , :class => 'form-control'%>
-  </div>
-  <div class="field">
+<div class="content active">
+<%= f.label :title %><br>
+    <%= f.text_field :title , :class => 'form-control'%> 
+   <br>
     <%= f.label :address %><br>
     <%= f.text_field :address, :id => 'autocomplete' , :onfocus => 'geolocate()', :autocomplete => 'off', :class => 'form-control' %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location , :id => 'location', :class => 'form-control'%>
-  </div>
-  <div class="field">
-    <%= f.label :pincode %><br>
-    <%= f.number_field :pincode , :id => 'pincode', :class => 'form-control'%>
-  </div>
-  <div class="field">
-    <%= f.label :quantity %><br>
-    <%= f.number_field :quantity , :class => 'form-control'%>
-  </div>
-  <div class="field">
-    <%= f.label :food_type %><br>
-    <%= f.text_field :food_type , :class => 'form-control'%>
-  </div>
-  <div class="field">
+
+    <%= f.hidden_field :location , :id => 'location', :class => 'form-control'%>
+    <a href="#" class="btn btn-primary next_btn MarginTop10Px">Next</a>
+</div>
+<div class="content">
+  <%= f.label :food_type %><br>
+  <%= f.text_field :food_type , :class => 'form-control'%>
+  <br>
+  <%= f.label :quantity %><br>
+  <%= f.number_field :quantity , :class => 'form-control'%>
+  <a href="#" class="btn btn-primary next_btn MarginTop10Px">Next</a>
+</div>
+<div class="content">
     <%= f.label :available_from %><br>
     <%= f.text_field :available_from , :class => 'form-control'%>
-  </div>
-  <div class="field">
+    <br/>
     <%= f.label :available_to %><br>
-    <%= f.text_field :available_to , :class => 'form-control'%>
+    <%= f.text_field :available_to , :class => 'form-control'%>  
+    <%= f.submit 'Donate', :class => 'btn btn-primary MarginTop10Px'  %>
+
+</div>
+  </div>
+ 
+  <div class="field">
+    
   </div>
   <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status , :class => 'form-control'%>
+    
+    
   </div>
+  
   <div class="actions">
-    <%= f.submit %>
   </div>
 <% end %>
+<script type="text/javascript">
+  $(function(){
+      $(".next_btn").click(function(){
+    var parent = $(this).parent()
+    parent.fadeThenSlideToggle();
+    parent.next('.content').fadeThenSlideToggle()
+  })
+  
+  jQuery.fn.fadeThenSlideToggle = function(speed, easing, callback) {
+  if (this.is(":hidden")) {
+    return this.slideDown(speed).fadeTo();
+  } else {
+    return this.fadeTo().slideUp(speed);
+    
+  }
+};
+  })
+</script>
+

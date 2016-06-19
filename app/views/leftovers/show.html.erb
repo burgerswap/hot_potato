@@ -1,3 +1,6 @@
+
+<div class="body-content">
+<div class="content active">
 <div class="alert alert-success" role="alert">You're Awesome.. We'll let people know you have leftovers</div>
 <p>
   <strong>Title:</strong>
@@ -8,17 +11,6 @@
   <strong>Address:</strong>
   <%= @leftover.address %>
 </p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @leftover.location %>
-</p>
-
-<p>
-  <strong>Pincode:</strong>
-  <%= @leftover.pincode %>
-</p>
-
 <p>
   <strong>Quantity:</strong>
   <%= @leftover.quantity %>
@@ -39,10 +31,7 @@
   <%= @leftover.available_to %>
 </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @leftover.status %>
-</p>
-
-<%= link_to 'Edit', edit_leftover_path(@leftover) %> |
-<%= link_to 'Back', root_path %>
+<%= link_to 'Edit', edit_leftover_path(@leftover) , :class => 'btn btn-primary MarginTop10Px'  %>
+<%= link_to 'Go back', root_path , :class => 'btn btn-primary MarginTop10Px'  %>
+</div>
+</div>
