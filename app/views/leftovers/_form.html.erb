@@ -20,6 +20,7 @@
 
     <%= f.hidden_field :location , :id => 'location', :class => 'form-control'%>
     <a href="#" class="btn btn-primary next_btn MarginTop10Px">Next</a>
+    <%= link_to 'Back', leftovers_path, :class => "btn btn-primary next_btn MarginTop10Px pull-right" %>
 </div>
 <div class="content">
   <%= f.label :food_type %><br>
@@ -28,6 +29,7 @@
   <%= f.label :quantity %><br>
   <%= f.number_field :quantity , :class => 'form-control'%>
   <a href="#" class="btn btn-primary next_btn MarginTop10Px">Next</a>
+  <%= link_to 'Back', leftovers_path, :class => "btn btn-primary next_btn MarginTop10Px pull-right" %>
 </div>
 <div class="content">
     <%= f.label :available_from %><br>
@@ -36,7 +38,7 @@
     <%= f.label :available_to %><br>
     <%= f.text_field :available_to , :class => 'form-control'%>  
     <%= f.submit 'Donate', :class => 'btn btn-primary MarginTop10Px'  %>
-
+    <%= link_to 'Back', leftovers_path, :class => "btn btn-primary next_btn MarginTop10Px pull-right" %>
 </div>
   </div>
  

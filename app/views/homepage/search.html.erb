@@ -1,7 +1,7 @@
 <script type="text/javascript">
 	$(function(){
 		$("#search-geo-location").click(function(){
-			alert($("#geo-latlng").val())
+			//alert($("#geo-latlng").val())
 			window.location.href = "http://localhost:3000/consumptions?geolocation="+$("#geo-latlng").val();
 		})
 	})
@@ -37,12 +37,12 @@
 
 <div class="body-content">
 <div class="row">
-<div class="panel height40">
-<h1>Where are you now...?</h1>
+<div class="content active">
+<h1>Where are you now ?</h1>
 <input type="text" id="autocomplete" class="form-control" onfocus="geolocate()" autocomplete="off"></input>
 <input type="hidden" id="geo-latlng" value=""></input>
 
-<a href="#" id="search-geo-location" class="btn btn-lg btn-primary">Search</a>
+<a href="#" id="search-geo-location" class="btn btn-lg btn-primary MarginTop10Px">Search</a>
 
 </div>
 </div>

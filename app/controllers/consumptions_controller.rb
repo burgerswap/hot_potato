@@ -7,7 +7,7 @@ class ConsumptionsController < ApplicationController
   def index
     #@consumptions = Consumption.all
      @geolocation = params[:geolocation].to_s.split(',')
-     @leftovers = Leftover.within(5, :origin => @geolocation)
+     @leftovers = Leftover.within(5, :origin => @geolocation).where('current_quantity > 0')
      @consumption = Consumption.new
   end
 

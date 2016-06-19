@@ -1,18 +1,6 @@
-<div class="alert alert-success" role="alert">Yay..! Your food is ready at <%=@consumption.leftover.address %></div>
-<p>
-  <strong>Leftover:</strong>
-  <%= @consumption.leftover_id %>
-</p>
+<div class="body-content">
+<div class="content active">
+<h2>Yay..! Your food is ready at <%=@consumption.leftover.address %><h2>
 
-<p>
-  <strong>Quantity:</strong>
-  <%= @consumption.quantity %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @consumption.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_consumption_path(@consumption) %> |
-<%= link_to 'Back', root_path %>
+<%= link_to 'Back', root_path , :class => 'btn btn-primary MarginTop10Px'  %>
+</div>

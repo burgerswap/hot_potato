@@ -18,14 +18,11 @@
 @import "bootstrap";
 
 html { 
-  background: url(bg.jpg) no-repeat center center fixed; 
+  background: url('bg.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-html:after {
-  background: rgba(0,0,0,0.1);
 }
 body{
 	background: none;
@@ -202,15 +199,22 @@ ul, menu, dir {
     transition: border 0.25s linear, color 0.25s linear, background-color 0.25s linear;
 }
 .content-text{
-	    background: rgba(220,215,215,.4);
+	    background: rgba(255,255,255,0.8);
     border-radius: 6px;
 }
 .content{
-	background: rgba(220,215,215,.4);
+	background: rgba(255,255,255,0.8);
     border-radius: 6px;
     border: 0px;
     padding:25px;
 }
 .MarginTop10Px {
 	margin-top:10px;
+}
+.input_qty{
+    width: 50px;
+    height: 32px;
+}
+.display-result th, .display-result td{
+  padding: 10px;
 }
