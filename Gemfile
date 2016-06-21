@@ -16,6 +16,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 gem 'omniauth-facebook'
 gem 'geokit-rails'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'byebug'
